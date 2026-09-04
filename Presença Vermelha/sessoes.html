@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crônicas da Campanha</title>
+    <!-- Fontes e Estilos AoE/GoT -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="sessoes.css">
+</head>
+<body>
+
+    <!-- Container Principal do Layout -->
+    <div class="sessoes-page">
+        
+        <!-- TÓPICO 1: Lista Lateral com o nome das Sessões -->
+        <div class="sidebar panel parchment-bg">
+            <div class="panel-header">SESSÕES</div>
+            <ul id="session-list">
+                <!-- Gerado pelo JavaScript -->
+            </ul>
+            <a href="index.html" class="back-btn">MENU PRINCIPAL</a>
+        </div>
+
+        <!-- TÓPICO 2: Grade Central com Quadros (Molduras) dos Personagens -->
+        <div class="main-content">
+            <div id="character-grid" class="char-grid">
+                <!-- Gerado pelo JavaScript ao clicar na sessão -->
+            </div>
+        </div>
+
+    </div>
+
+    <!-- TÓPICO 3: A "Aba" de Detalhes (Começa Invisível) -->
+    <div id="details-overlay" class="overlay" style="display: none;">
+        <div class="details-window panel parchment-bg">
+            
+            <div class="panel-header" id="details-char-name">Nome do Personagem</div>
+            
+            <div class="details-content">
+                <!-- Imagem relacionada à ação ou sessão -->
+                <div class="details-illustration">
+                    <img id="details-action-img" src="" alt="Ilustração da Ação">
+                </div>
+                
+                <!-- NOVO: Título da Ação -->
+                <h3 id="details-action-title" class="action-title">Título do Resumo</h3>
+                
+                <!-- Texto descritivo -->
+                <div id="details-text" class="parchment-text">
+                    Carregando os pergaminhos...
+                </div>
+            </div>
+
+            <button class="close-btn" onclick="closeDetails()">FECHAR</button>
+        </div>
+    </div>
+
+    <script src="sessoes.js"></script>
+</body>
+</html>

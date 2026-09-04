@@ -1,0 +1,287 @@
+/* === RESET E FUNDO === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    background-image: url('https://static.vecteezy.com/system/resources/thumbnails/056/123/439/small/castle-dark-stone-wall-photo.jpg'); 
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Cinzel', serif;
+    color: #1a1510; 
+}
+
+.parchment-bg {
+    background-image: url('fundocarta.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.sessoes-page {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* === PAINÉIS PADRÃO === */
+.panel {
+    border: 2px solid #b99353;
+    box-shadow: 5px 0 30px rgba(0,0,0,0.8);
+    display: flex;
+    flex-direction: column;
+}
+
+.panel-header {
+    background: linear-gradient(to bottom, #7a0904, #3d0000); 
+    color: #f0d588; 
+    text-align: center;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 20px;
+    border-bottom: 2px solid #b99353;
+    letter-spacing: 2px;
+}
+
+/* === BARRA LATERAL === */
+.sidebar {
+    width: 300px;
+    height: 100%;
+}
+
+#author-list {
+    list-style: none;
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 15px;
+}
+
+#author-list li {
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    transition: 0.2s;
+}
+
+#author-list li:hover { background: rgba(0,0,0,0.05); }
+#author-list li.active {
+    background: rgba(185, 147, 83, 0.5); 
+    color: black;
+    font-weight: bold;
+    border-left: 4px solid #7a0904;
+}
+
+/* === ÁREA CENTRAL: O LIVRO ABERTO === */
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+/* O contêiner principal que simula o livro */
+.open-book {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: 85vh;
+    display: flex;
+    background-image: url('fundocarta.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 6px;
+    
+    /* Capa de couro vermelho escuro nas bordas */
+    border: 6px solid #3d0000;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.9);
+}
+
+/* A ILUSÃO DA LOMBADA DO LIVRO (Sombra no meio) */
+.open-book::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 50%; bottom: 0;
+    width: 60px;
+    transform: translateX(-50%);
+    background: linear-gradient(to right, 
+        rgba(255,255,255,0) 0%, 
+        rgba(0,0,0,0.3) 30%, 
+        rgba(0,0,0,0.6) 50%, 
+        rgba(0,0,0,0.3) 70%, 
+        rgba(255,255,255,0) 100%);
+    pointer-events: none; /* Para não atrapalhar o clique nos textos */
+    z-index: 10;
+}
+
+/* As páginas divididas */
+.book-half {
+    width: 50%;
+    height: 100%;
+    padding: 40px 60px;
+    overflow-y: auto;
+}
+
+/* Curvatura sutil nas páginas usando sombras internas */
+.left-page {
+    box-shadow: inset -15px 0 20px -15px rgba(0,0,0,0.7);
+}
+.right-page {
+    box-shadow: inset 15px 0 20px -15px rgba(0,0,0,0.7);
+}
+
+/* === PÁGINA ESQUERDA (ÍNDICE) === */
+.diary-title {
+    font-size: 32px;
+    color: #7a0904;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.page-divider {
+    height: 2px;
+    background: rgba(185, 147, 83, 0.6);
+    margin-bottom: 30px;
+}
+
+.index-subtitle {
+    font-family: Georgia, serif;
+    font-style: italic;
+    color: #5c4022;
+    margin-bottom: 15px;
+}
+
+.entries-list {
+    list-style: none;
+}
+
+.entries-list li {
+    padding: 15px;
+    border-bottom: 1px dashed rgba(139, 69, 19, 0.4);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.entries-list li:hover {
+    background: rgba(139, 69, 19, 0.05);
+    padding-left: 20px;
+}
+
+.entries-list li.active {
+    background: rgba(122, 9, 4, 0.08);
+    font-weight: bold;
+    color: #7a0904;
+    border-left: 3px solid #7a0904;
+}
+
+.entry-item-date {
+    font-family: Georgia, serif;
+    font-size: 14px;
+    color: #4a3520;
+    margin-bottom: 5px;
+}
+
+.entry-item-title {
+    font-family: 'Cinzel', serif;
+    font-size: 18px;
+}
+
+/* === PÁGINA DIREITA (TEXTO CALIGRAFADO) === */
+.entry-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.entry-date {
+    font-family: Georgia, serif;
+    font-style: italic;
+    color: #5c4022;
+    font-size: 16px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.entry-title {
+    font-size: 26px;
+    color: #1a1510;
+    border-bottom: 1px solid rgba(139, 69, 19, 0.3);
+    padding-bottom: 10px;
+}
+
+/* A MÁGICA DA CALIGRAFIA */
+.handwritten-text {
+    font-family: 'Caveat', cursive; /* Fonte manuscrita */
+    font-size: 26px; /* Maior porque fontes manuscritas são menores */
+    line-height: 1.4;
+    color: #0f182b; /* Cor de tinta de pena (azul/preto muito escuro) */
+    white-space: pre-wrap; /* Respeita as quebras de linha do Discord! */
+    text-align: justify;
+}
+
+.signature {
+    font-family: 'Caveat', cursive;
+    font-size: 32px;
+    font-weight: bold;
+    color: #7a0904; /* Tinta vermelha para a assinatura */
+    text-align: right;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px dashed rgba(139, 69, 19, 0.3);
+}
+
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: #5c4022;
+    font-family: Georgia, serif;
+    font-style: italic;
+    text-align: center;
+    opacity: 0.6;
+}
+
+.ink-icon {
+    width: 60px;
+    margin-bottom: 20px;
+    mix-blend-mode: multiply;
+}
+
+/* Botoes base */
+.back-btn {
+    display: block;
+    background: #3d0000;
+    color: #f0d588;
+    border: 2px solid #b99353;
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    margin: 15px; 
+    padding: 10px; 
+    text-decoration: none; 
+    font-size: 14px;
+}
+.back-btn:hover { background: #7a0904; }
+
+/* Scrollbars */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: rgba(0, 0, 0, 0.05); }
+::-webkit-scrollbar-thumb { background: #4a545e; }
+
+/* === RESPONSIVIDADE (Celulares) === */
+@media (max-width: 900px) {
+    .open-book { flex-direction: column; height: auto; border: 2px solid #3d0000; }
+    .open-book::before { display: none; } /* Remove a lombada no celular */
+    .book-half { width: 100%; height: auto; box-shadow: none; padding: 20px; }
+    .left-page { border-bottom: 2px solid rgba(139, 69, 19, 0.4); }
+}

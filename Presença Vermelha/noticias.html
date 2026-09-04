@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corvos e Crônicas - Notícias do RPG</title>
+    <!-- Fontes AoE / GoT -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Georgia&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="noticias.css">
+</head>
+<body>
+
+    <!-- ESSA DIV É A MESA COM O PERGAMINHO (Faltava ela!) -->
+    <div class="board-container">
+
+        <!-- ABAS SUPERIORES -->
+        <nav class="tabs-nav">
+            <button class="tab-btn active" data-category="todas">Todos os Corvos</button>
+            <button class="tab-btn" data-category="mundo">Westeros</button>
+            <button class="tab-btn" data-category="mecanicas">Mecânicas</button>
+            <button class="tab-btn" data-category="avisos">Avisos da Mesa</button>
+            <!-- A NOVA ABA DE CALENDÁRIO -->
+            <button class="tab-btn" data-category="calendario">Calendário</button>
+        </nav>
+
+        <!-- ÁREA CENTRAL DO PERGAMINHO -->
+        <div class="parchment-content">
+            
+            <!-- ====== CONTÊINER DAS NOTÍCIAS (PADRÃO) ====== -->
+            <div id="news-container" class="view-section" style="display: flex;">
+                <aside class="index-sidebar">
+                    <h2 class="index-title">Índice de Registros</h2>
+                    <ul id="news-list" class="news-list">
+                        <!-- Gerado pelo JS -->
+                    </ul>
+                    <a href="index.html" class="btn-back">Voltar ao Menu Principal</a>
+                </aside>
+
+                <main class="news-reader">
+                    <div class="reader-header">
+                        <span id="news-tag" class="reader-tag">Categoria</span>
+                        <span id="news-date" class="reader-date">00/00/0000</span>
+                    </div>
+                    <h1 id="news-title" class="reader-title">Título da Notícia</h1>
+                    <div id="news-body" class="reader-body">Carregando a mensagem do corvo...</div>
+                </main>
+            </div>
+
+            <!-- ====== NOVO: CONTÊINER DO CALENDÁRIO ====== -->
+            <div id="calendar-container" class="view-section" style="display: none;">
+                
+                <!-- Lateral do Calendário (Seleção de Ano e Luas) -->
+                <aside class="index-sidebar">
+                    <!-- O Título virou um Seletor de Ano -->
+                    <h2 class="index-title">
+                        <select id="year-select" class="year-select">
+                            <option value="278" selected>Ano 278 DC</option>
+                        </select>
+                    </h2>
+                    <ul id="moons-list" class="news-list">
+                        <!-- As 12 Luas geradas pelo JS -->
+                    </ul>
+                </aside>
+
+                <!-- Grade do Calendário (Direita) -->
+                <main class="news-reader">
+                    <h1 id="calendar-title" class="reader-title">1ª Lua</h1>
+                    
+                    <div class="calendar-grid-header">
+                        <span>Dom</span><span>Seg</span><span>Ter</span><span>Qua</span><span>Qui</span><span>Sex</span><span>Sáb</span>
+                    </div>
+                    
+                    <div id="calendar-grid" class="calendar-grid">
+                        <!-- Dias gerados pelo JS -->
+                    </div>
+
+                    <!-- Detalhes do Evento (Onde a linha do tempo aparece ao clicar no dia) -->
+                    <div id="event-details" class="event-details" style="display: none;">
+                        <span id="event-date-text" class="reader-tag" style="background:#5c4022;">Data</span>
+                        <h3 id="event-title" class="event-title-text">Título do Feriado/Evento</h3>
+                        <div id="event-desc" class="reader-body">Descrição do que aconteceu neste dia...</div>
+                    </div>
+                </main>
+            </div>
+
+        </div> <!-- Fim da parchment-content -->
+        
+    </div> <!-- FIM DA BOARD-CONTAINER -->
+
+    <script src="noticias.js"></script>
+</body>
+</html>

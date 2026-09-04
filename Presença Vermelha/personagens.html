@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Facções e Personagens</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="personagens.css">
+</head>
+<body>
+
+    <div class="sessoes-page">
+        
+        <!-- BARRA LATERAL: Lista de Facções -->
+        <div class="sidebar panel parchment-bg">
+            <div class="panel-header">FACÇÕES</div>
+            <ul id="faction-list">
+                <!-- Gerado pelo JavaScript -->
+            </ul>
+            <a href="index.html" class="back-btn">MENU PRINCIPAL</a>
+        </div>
+
+        <!-- ÁREA CENTRAL: Página do Apêndice -->
+        <div class="main-content">
+            <div id="book-page" class="book-page panel parchment-bg" style="display: none;">
+                
+                <!-- Símbolo e Título Centralizados -->
+                <div class="page-header">
+                    <img id="faction-sigil" src="" alt="Símbolo da Facção" class="sigil-img">
+                    <h1 id="faction-title" class="faction-name">Nome da Casa</h1>
+                </div>
+
+                <!-- Texto e Hierarquia (Injetados pelo JS) -->
+                <div id="faction-content" class="book-text">
+                    <!-- O texto bruto será carregado aqui -->
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- MODAL DE DETALHES DO PERSONAGEM (Mantido igual) -->
+    <div id="details-overlay" class="overlay" style="display: none;">
+        <div class="details-window panel parchment-bg">
+            
+            <div class="panel-header" id="details-char-name">Nome do Personagem</div>
+            
+            <div class="details-content">
+                <div class="details-illustration">
+                    <img id="details-action-img" src="" alt="Ilustração do Personagem">
+                </div>
+                
+                <h3 id="details-action-title" class="action-title black-title">Título do Personagem</h3>
+                
+                <div id="details-text" class="parchment-text">
+                    Carregando os pergaminhos...
+                </div>
+            </div>
+
+            <button class="close-btn" onclick="closeDetails()">FECHAR</button>
+        </div>
+    </div>
+
+    <script src="personagens.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presença Vermelha - RPG</title>
+    <!-- Importando a fonte e o arquivo CSS externo -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- PAINEL ESQUERDO (Menu) -->
+    <div class="left-panel">
+        <div class="logo">
+            <h1>Presença Vermelha</h1>
+            <h2>Guerra dos Tronos RPG</h2>
+        </div>
+
+        <div class="main-menu">
+            <!-- As tags <a> transformam o bloco inteiro em uma área clicável -->
+            <a href="sessoes.html" class="btn-large" onclick="playSound('click')">
+                <div class="btn-img">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcCTQToiVHR5tZu0qMJ_sSNqLi-dFAvnO01x_0OVi4Nw&s=10" alt="Imagem da Campanha">
+                </div>
+                <div class="btn-label">SESSÕES</div>
+            </a>
+            
+            <a href="personagens.html" class="btn-large" onclick="playSound('click')">
+                <div class="btn-img">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPRyiMn942YshDwe483fbk54O4stmyuy9xTNN27M-vmw&s=10" alt="Imagem da Patrulha">
+                </div>
+                <div class="btn-label">PERSONAGENS</div>
+            </a>
+
+            <a href="historia.html" class="btn-large" onclick="playSound('click')">
+                <div class="btn-img">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXZ6bPwHHPARR4S3PnE_C16IVmEeqDCh8THgQ02cEMMg&s" alt="Imagem de Westeros">
+                </div>
+                <div class="btn-label">HISTÓRIA</div>
+            </a>
+        </div>
+
+        <div class="separator">
+            <span class="separator-icon">⚔️</span>
+        </div>
+
+        <a href="noticias.html" class="btn-small" onclick="playSound('click')">NOTÍCIAS</a>
+        <a href="diarios.html" class="btn-small" onclick="playSound('click')">DIÁRIOS</a>
+    </div>
+
+    <!-- PAINÉIS DA DIREITA (Adaptados para o RPG) -->
+    <div class="right-panels">
+        <div class="profile-section">
+            <div class="icon-group">
+                <div class="icon-btn settings" title="Configurações">⚙️</div>
+                <div class="icon-btn" title="Mensagens do Mestre">✉️</div>
+            </div>
+            <div class="icon-group">
+                <div class="icon-btn xbox" title="Rolador de Dados">🎲</div>
+            </div>
+            <div class="avatar" title="Seu Brasão / Personagem">
+                <img src="data:image/jpeg;base64,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" alt="Meu Brasão">
+            </div>
+            <div class="player-info">
+                <div class="player-name">Aerys II</div>
+                <div class="xbox-status">Status: Rei Louco de Westeros</div>
+            </div>
+        </div>
+
+        <div class="promo-panel">
+            <div class="promo-title">Os Primeiros Dias</div>
+            <div class="promo-subtitle">Próximo evento global da campanha!</div>
+        </div>
+    </div>
+
+    <div class="version">
+        VERSÃO DO SISTEMA 1.0 (BETA)
+    </div>
+
+    <!-- Importando o arquivo JavaScript externo -->
+    <script src="script.js"></script>
+</body>
+</html>

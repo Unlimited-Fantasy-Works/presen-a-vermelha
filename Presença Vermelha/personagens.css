@@ -1,0 +1,234 @@
+/* === RESET E FUNDO === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    background-image: url('https://static.vecteezy.com/system/resources/thumbnails/056/123/439/small/castle-dark-stone-wall-photo.jpg'); 
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Cinzel', serif;
+    color: #1a1510; 
+}
+
+.parchment-bg {
+    background-image: url('fundocarta.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.sessoes-page {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.panel {
+    border: 2px solid #b99353;
+    box-shadow: 5px 0 30px rgba(0,0,0,0.8);
+    display: flex;
+    flex-direction: column;
+}
+
+.panel-header {
+    background: linear-gradient(to bottom, #7a0904, #3d0000); 
+    color: #f0d588; 
+    text-align: center;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 20px;
+    border-bottom: 2px solid #b99353;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* === BARRA LATERAL === */
+.sidebar {
+    width: 300px;
+    height: 100%;
+}
+
+#faction-list {
+    list-style: none;
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 15px;
+}
+
+#faction-list li {
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    transition: 0.2s;
+}
+
+#faction-list li:hover { background: rgba(0,0,0,0.05); }
+#faction-list li.active {
+    background: rgba(185, 147, 83, 0.5); 
+    color: black;
+    font-weight: bold;
+}
+
+/* === ÁREA CENTRAL (PÁGINA DO APÊNDICE) === */
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    overflow-y: auto;
+}
+
+.book-page {
+    width: 100%;
+    max-width: 1100px;
+    padding: 50px 80px;
+    overflow-y: auto;
+}
+
+/* Cabeçalho da Página */
+.page-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sigil-img {
+    max-width: 250px;
+    height: auto;
+    margin-bottom: 20px;
+    mix-blend-mode: multiply; /* Faz o fundo branco da imagem sumir no pergaminho */
+}
+
+.faction-name {
+    font-size: 36px;
+    color: #1a1510;
+}
+
+/* Formatação do Texto e Hierarquia */
+.book-text {
+    font-family: Georgia, serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #1a1510;
+    text-align: justify;
+}
+
+.book-text p {
+    margin-bottom: 6px;
+}
+
+.hierarchy {
+    margin: 25px 0;
+}
+
+/* Recuos/Indentações que simulam os livros */
+.indent-1 { margin-left: 30px; }
+.indent-2 { margin-left: 60px; }
+.indent-3 { margin-left: 90px; }
+
+/* Links Interativos dos Personagens */
+.char-link {
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+    color: #7a0904;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    border-bottom: 1px dotted transparent;
+}
+
+.char-link:hover {
+    color: #b99353;
+    border-bottom: 1px dotted #b99353;
+}
+
+
+/* === MODAL DE DETALHES === */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.85); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.details-window {
+    width: 80vw;
+    max-width: 1000px;
+    height: 90vh;
+    box-shadow: 0 0 50px rgba(0,0,0,0.9);
+}
+
+.details-content {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.details-illustration {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.details-illustration img {
+    max-width: 100%;
+    max-height: 350px;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+}
+
+.action-title.black-title {
+    font-family: 'Cinzel', serif;
+    font-size: 24px;
+    color: #1a1510;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(185, 147, 83, 0.8); 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.parchment-text {
+    font-family: Georgia, serif;
+    font-size: 19px;
+    line-height: 1.6;
+    text-align: justify;
+    color: #1a1510;
+}
+
+/* BOTÕES GERAIS */
+.back-btn, .close-btn {
+    display: block;
+    background: #3d0000;
+    color: #f0d588;
+    border: 2px solid #b99353;
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+}
+
+.back-btn { margin: 15px; padding: 10px; text-decoration: none; font-size: 14px; }
+.close-btn { margin: 20px; padding: 12px 50px; align-self: center; font-size: 18px; }
+
+.back-btn:hover, .close-btn:hover { background: #7a0904; }
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: rgba(0, 0, 0, 0.05); }
+::-webkit-scrollbar-thumb { background: #4a545e; }

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diários</title>
+    <!-- Fontes: Cinzel para títulos, Georgia para texto comum, Caveat para a caligrafia -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Caveat:wght@400;500;600&family=Georgia&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="diarios.css">
+</head>
+<body>
+
+    <!-- Container Principal -->
+    <div class="sessoes-page">
+        
+        <!-- BARRA LATERAL: Lista de Jogadores/Autores -->
+        <div class="sidebar panel parchment-bg">
+            <div class="panel-header">AUTORES</div>
+            <ul id="author-list">
+                <!-- Gerado pelo JavaScript -->
+            </ul>
+            <a href="index.html" class="back-btn">MENU PRINCIPAL</a>
+        </div>
+
+        <!-- ÁREA CENTRAL: O Livro Aberto -->
+        <div class="main-content">
+            
+            <div id="book-container" class="open-book" style="display: none;">
+                
+                <!-- PÁGINA ESQUERDA: Índice do Diário -->
+                <div class="book-half left-page">
+                    <h2 id="diary-author-name" class="diary-title">Diário</h2>
+                    <div class="page-divider"></div>
+                    
+                    <h4 class="index-subtitle">Registros</h4>
+                    <ul id="diary-entries-list" class="entries-list">
+                        <!-- JS gera a lista de registros aqui -->
+                    </ul>
+                </div>
+                
+                <!-- PÁGINA DIREITA: O Texto Escrito -->
+                <div class="book-half right-page">
+                    
+                    <!-- Estado quando uma anotação é selecionada -->
+                    <div id="entry-content" class="entry-content" style="display: none;">
+                        <div class="entry-header">
+                            <span id="entry-date" class="entry-date">Data</span>
+                            <h3 id="entry-title" class="entry-title">Título</h3>
+                        </div>
+                        
+                        <!-- A classe handwritten aplica a caligrafia -->
+                        <div id="entry-text" class="handwritten-text">
+                            Texto do discord carregando...
+                        </div>
+                        
+                        <!-- Assinatura no fim da página -->
+                        <div id="entry-signature" class="signature">
+                            Assinatura
+                        </div>
+                    </div>
+
+                    <!-- Estado vazio (antes de clicar em um registro) -->
+                    <div id="empty-state" class="empty-state">
+                        <img src="https://cdn-icons-png.flaticon.com/512/32/32155.png" alt="Pena e Tinteiro" class="ink-icon">
+                        <p>Selecione um registro na página ao lado para ler as memórias.</p>
+                    </div>
+
+                </div>
+                
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="diarios.js"></script>
+</body>
+</html>

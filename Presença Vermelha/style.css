@@ -1,0 +1,296 @@
+
+:root {
+    --gold-border: #b99353;
+    --gold-text: #f0d588;
+    --red-bg-top: #7a0904;
+    --red-bg-bottom: #3d0000;
+    --panel-bg: rgba(20, 15, 10, 0.8);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('https://awoiaf.westeros.org/images/1/1b/Dreadfort_Big.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: 'Cinzel', serif;
+    overflow: hidden;
+    color: white;
+}
+
+
+.left-panel {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 340px;
+    height: 100%;
+    background: linear-gradient(to right, rgba(15,10,5,0.9) 0%, rgba(25,15,5,0.7) 100%);
+    border-right: 3px solid var(--gold-border);
+    box-shadow: 5px 0 20px rgba(0,0,0,0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--gold-text);
+    text-shadow: 2px 2px 4px #000;
+}
+
+.logo h1 { font-size: 32px; letter-spacing: 2px; }
+.logo h2 { font-size: 12px; letter-spacing: 4px; color: #a0a0a0; }
+
+.main-menu { width: 100%; }
+
+.btn-large {
+    width: 100%;
+    margin-bottom: 15px;
+    border: 2px solid var(--gold-border);
+    cursor: pointer;
+    transition: transform 0.1s, box-shadow 0.2s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.6);
+}
+
+.btn-large:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 12px var(--gold-border);
+}
+
+.btn-img {
+    height: 90px;
+    background: #d3c4a9;
+    border-bottom: 2px solid var(--gold-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(0,0,0,0.5);
+    font-size: 12px;
+}
+
+.btn-label {
+    background: linear-gradient(to bottom, var(--red-bg-top), var(--red-bg-bottom));
+    color: var(--gold-text);
+    text-align: center;
+    padding: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 16px;
+    text-shadow: 1px 1px 2px #000;
+}
+
+.separator {
+    width: 100%;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0;
+}
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--gold-border);
+}
+.separator-icon {
+    color: var(--gold-text);
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.btn-small {
+    width: 100%;
+    background: linear-gradient(to bottom, var(--red-bg-top), var(--red-bg-bottom));
+    border: 2px solid var(--gold-border);
+    color: var(--gold-text);
+    padding: 8px;
+    text-align: center;
+    margin-bottom: 15px;
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: transform 0.1s, box-shadow 0.2s;
+}
+
+.btn-small:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 10px var(--gold-border);
+}
+
+.right-panels {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.profile-section {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.icon-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.icon-btn {
+    width: 30px;
+    height: 30px;
+    background: var(--red-bg-bottom);
+    border: 1px solid var(--gold-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.icon-btn.settings { background: #b80000; border-color: yellow; }
+.icon-btn.xbox { background: #107C10; }
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    border: 2px solid var(--gold-border);
+    background: #333;
+    overflow: hidden; 
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.player-info { width: 300px; }
+
+.player-name {
+    background: linear-gradient(to bottom, var(--red-bg-top), var(--red-bg-bottom));
+    border: 2px solid var(--gold-border);
+    padding: 8px;
+    text-align: center;
+    color: var(--gold-text);
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.xbox-status {
+    background: rgba(0,0,0,0.6);
+    padding: 5px;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 12px;
+    color: #ddd;
+}
+
+.promo-panel {
+    width: 350px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.8);
+}
+
+.promo-title {
+    background: linear-gradient(to bottom, var(--red-bg-top), var(--red-bg-bottom));
+    border: 2px solid var(--gold-border);
+    padding: 10px;
+    text-align: center;
+    color: var(--gold-text);
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.promo-subtitle {
+    background: rgba(30, 35, 40, 0.85);
+    padding: 8px;
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+.version {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 2px #000;
+}
+a {
+    text-decoration: none;
+    display: block; 
+}
+
+.btn-img {
+    height: 90px;
+    background: #d3c4a9;
+    border-bottom: 2px solid var(--gold-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(0,0,0,0.5);
+    font-size: 12px;
+    
+    overflow: hidden; 
+}
+
+
+.btn-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: top; 
+    display: block;
+}
+
+/* === RESPONSIVIDADE PARA TELAS MENORES E NOTEBOOKS === */
+@media (max-height: 900px) {
+    /* Encolhe os espaços e tamanhos se a tela for menor que 900px de altura */
+    .left-panel { 
+        padding: 2vh 20px; 
+    }
+    .logo { 
+        margin-bottom: 2vh; 
+    }
+    .logo h1 { 
+        font-size: 24px; 
+    }
+    .btn-large { 
+        margin-bottom: 1.5vh; 
+    }
+    .btn-img { 
+        height: 10vh; /* A altura da imagem agora é calculada em % da tela */
+        min-height: 60px; 
+    }
+    .btn-label { 
+        padding: 1vh; 
+        font-size: 14px; 
+    }
+    .separator { 
+        margin: 1.5vh 0; 
+    }
+    .btn-small { 
+        margin-bottom: 1.5vh; 
+        padding: 1vh; 
+        font-size: 14px; 
+    }
+}
