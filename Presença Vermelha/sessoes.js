@@ -7,22 +7,22 @@ const cronicasDB = [
         // Personagens presentes NESTA sessão
         personagens: [
             {
-                nome: 'Jaime',
-                retrato: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV2i3owH36lxD5l90OrMIk2OWRiQmnYH6H3ufzOiIsMw&s=10', // Coloque o nome do arquivo da moldura
+                nome: 'Torvin',
+                retrato: 'https://i.ibb.co/S4fbYnPw/torvin.png', // Coloque o nome do arquivo da moldura
                 detalhes: {
-                    imagem: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSihfb8D4-4ZDHxx67td13qLR1WbKBf1LjDMFMxBVFv6A&s=10', // Imagem que abre no modal
-                    tituloAcao: 'O Duelo Desleal',
-                    texto: 'Jaime desafia Stanis para um duelo, argumentando que ele não possui tanta honra quanto diz. Durante o duelo Jaime trapaceia colocando armadilhas pelo terreno. Ao final do combate é descoberto por Robert que o humilha na presença de todos.'
+                    imagem: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsqmza_QvVLnxHe4-VTsZiR_KKOcU9v23Z6JyzjQzjl-DCOcYiQfGvPev4&s=10', // Imagem que abre no modal
+                    tituloAcao: 'O Segundo Ousado',
+                    texto: 'Torvin Snow, o bastardo dos Bolton, tinha apenas treze anos quando chegou a Ponta Tempestade e fez seu nome entre homens muito mais velhos: no torneio, enfrentou um dos incontáveis filhos de Lorde Frey, conhecido pelo apelido de Espinha, e o derrotou diante de nobres e cavaleiros, embora mais tarde tenha sido vencido por Donnel Clegane, um homem adulto e experiente, derrota que pouco diminuiu a ousadia demonstrada pelo jovem. Entre os que assistiram às suas façanhas estava Ser Barristan Selmy, antigo amigo do pai de Torvin desde os dias da Guerra dos Reis das Nove Moedas; impressionado pela coragem do rapaz, Barristan ofereceu-se para tomá-lo como escudeiro em Porto Real. Desde então, Torvin passou a ser lembrado como o Segundo Ousado, um garoto que, apesar da idade e do nascimento bastardo, não hesitava em lançar-se contra homens feitos, como se ainda não tivesse aprendido o medo que os adultos carregavam.'
                 }
             },
             
             {
-                nome: 'Edric',
-                retrato: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8gkpiwDV3GomhljCor-1r71PVzaa7iOcld3FZ7oyzcA&s=10',
+                nome: 'Gargon',
+                retrato: 'https://i.ibb.co/3m6VXHkr/Gargon.png',
                 detalhes: {
-                    imagem: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYOWxPaD4TpyWJRjFLxbT2hlVeTHsK-Qufc5qeGFWYvg&s=10',
+                    imagem: 'https://static.vecteezy.com/ti/vetor-gratis/p1/67526649-martelo-de-guerra-40k-imperial-martelo-com-cranio-e-asas-vintage-arte-silhueta-projeto-emblema-vetor.jpg',
                     tituloAcao: 'Sussurros em Ponta Tempestade',
-                    texto: 'Em uma reunião com, seu cunhado e Senhor de Ponta Tempestade, Steffon Baratheon, Edric demonstra preocupações com seu amigo Aerys. Steffon diz que ele só está um pouco doente e não é para se preocupar.'
+                    texto: 'Gargon Bolton chegou à festa do dia do nome de Renly Baratheon esperando apenas cumprir seu dever, mas acabou encontrando no jovem Robert Baratheon um amigo inesperado; na véspera do torneio, os dois treinaram juntos até o cair da noite, e a camaradagem entre eles cresceu depressa, embora o comportamento de Gargon durante as justas tenha lançado uma sombra sobre a amizade, pois, tomado pela fúria do combate, tentou matar Brandon Stark, provocando sérios atritos entre as casas Bolton e Stark. Ainda assim, foi outro escândalo que fez a paciência de Gargon chegar ao fim: seu sobrinho Jaime, herdeiro dos Bolton e prometido a Lyanna Stark, foi descoberto trocando carícias com o herdeiro de Tarth, colocando em risco a aliança cuidadosamente construída entre Bolton e Stark e trazendo desonra sobre sua casa. Com a situação cada vez mais difícil de conter, Gargon foi então convidado a partir para o Vale de Arryn na companhia do herdeiro de Ponta Tempestade, numa tentativa de afastá-lo das intrigas e dar-lhe tempo para esfriar a cabeça antes que sua ira transformasse a desonra de sua família em algo ainda pior.'
                 }
             }
             
